@@ -15,11 +15,11 @@
     )
 
     func main() {
-        str := GenerateOTP("Di", "dijielin@qq.com")
+        str := otpauth.GenerateOTP("Di", "dijielin@qq.com")
 
         fmt.Printf("OTPAUTH字符串: %s\n",str)
 
-        if CompareCode(3, 865946, "MNTIZ73RIWUUO2PJ") {
+        if otpauth.CompareCode(3, 865946, "MNTIZ73RIWUUO2PJ") {
             fmt.Println("Verification Pass!")
         } else {
             fmt.Println("Verification Faild!")
